@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+	<manialink version="3" background="stars" navigable3d="yes">
+		<stylesheet>
+			<mood
+			LAmbient_LinearRgb="1.000 1.000 1.000"
+			LDir0_LinearRgb="1.000 1.000 1.000"
+			LDir0_Intens="1.000"
+			LDir0_DirTheta="70.000"
+			LDir0_DirPhi="170.000"
+			LDir1_LinearRgb="1.000 1.000 1.000"
+			LDir1_Intens="8.000"
+			LDir1_DirTheta="70.000"
+			LDir1_DirPhi="170.000"
+			LBall_LinearRgb="1.000 1.000 1.000"
+			LBall_Intens="1.000"
+			LBall_Radius="20.000"
+			CloudsRgbMinLinear="0.010 0.020 0.100"
+			CloudsRgbMaxLinear="0.010 0.040 0.500"
+			FogColorSrgb="1.000 1.000 1.000"
+			SkyGradientV_Scale="1.000"
+			SelfIllumColor="1.000 1.000 1.000"
+			>
+				<skygradient>
+					<key x="0.05" color="88BBFF"/>
+					<key x="0.2" color="335599"/>
+					<key x="0.3" color="003366"/>
+					<key x="0.45" color="000011"/>
+				</skygradient>
+			</mood>
+			<frame3dstyles>
+				<style3d id="Frame_Window" model="Window" thickness="0.05" color="00F" fcolor="00F" lightcolor="0000FF" flightcolor="0000FF"/>
+				<style3d id="TitleMenuBg" model="Title" thickness="0.05" color="FFF" fzoffset="0.01" lightcolor="000088" flightcolor="0000FF"/>
+				<style3d id="QuitButton" model="Button" thickness="0.05" color="002" fzoffset="0.01" fcolor="600" lightcolor="000088" flightcolor="FF0000"/>
+				<style3d id="StyleButton" model="Button" thickness="0.05" color="008" fzoffset="0.01" fcolor="00F" lightcolor="000088" flightcolor="0000FF"/>
+				<style3d id="StyleButtonExample" model="Button" thickness="0.05" color="008" zoffset="0.2" fzoffset="0.21" fcolor="00F" lightcolor="000088" flightcolor="0000FF"/>
+				<style3d id="Frame_BaseStation" model="Station3x3" thickness="1" zoffset="-1.0" fzoffset="-1.0" color="000" fcolor="FFF" lightcolor="0000FF" flightcolor="0000FF"/>
+				<style3d id="Frame3d_Station3x3" model="Station3x3" thickness="1" zoffset="-2" fzoffset="-2" fyoffset="0.02" color="000" fcolor="FFF" lightcolor="000000" flightcolor="0000FF"/>
+				<style3d id="Frame3d_Station2x2" model="Station2x2" thickness="1" zoffset="-1" fzoffset="-1" fyoffset="0.02" color="000" fcolor="0F0" lightcolor="000000" flightcolor="0000FF"/>
+				<style3d id="Frame3d_Station1x1" model="Station1x1" thickness="1" zoffset="0" fzoffset="0" fyoffset="0.02" color="000" fcolor="00F" lightcolor="000000" flightcolor="0000FF"/>
+				<style3d id="Frame_Titlelogo" model="Titlelogo" thickness="0.05" color="008" fzoffset="0.01" fcolor="00F" lightcolor="000088" flightcolor="0000FF"/>
+				<style3d id="Frame_BoxCase" model="BoxCase" thickness="0.05" color="008" fzoffset="0.01" roffset="45 0" zrot="45" fcolor="00F" lightcolor="000088" flightcolor="0000FF"/>
+			</frame3dstyles>
+		</stylesheet>
+
+		<!-- Header Menu -->
+		<frame3d posn="-160 85" z-index="0" sizen="70 25" style3d="TitleMenuBg" scriptevents="1">
+			<quad posn="0 0" sizen="70 25" scriptevents="1" id="Button_Home"/>
+			<label posn="35 -6" z-index="1" halign="center" valign="center" textsize="8" textfont="BiryaniDemiBold" text="Styles 3D"/>
+			<label posn="35 -13" z-index="1" halign="center" valign="center" textsize="2" textfont="BiryaniDemiBold" text="for the <frame3d> tag."/>
+			<label posn="35 -17" z-index="1" halign="center" valign="center" textsize="1" textfont="BiryaniDemiBold" text="Click on a button below or here for the start page."/>
+			<label posn="35 -20" z-index="1" halign="center" valign="center" textsize="1" textfont="BiryaniDemiBold" text="Powered by $fffN$000-$fffJin$g."/>
+		</frame3d>
+
+		<!-- Quit Button -->
+		<frame3d posn="-160 -75" sizen="70 13" style3d="QuitButton">
+			<label posn="0 0" sizen="71 15" z-index="1" style="CardMain_Quit" text="Quit" action="quit"/>
+		</frame3d>
+		<!-- Left Buttons to navigate -->
+		<frame3d posn="-160 58" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_BaseStation"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="BaseStation"/>
+		</frame3d>
+		<frame3d posn="-160 46" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_BaseBoxCase"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="BaseBoxCase"/>
+		</frame3d>
+		<frame3d posn="-160 34" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_Titlelogo"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="Titlelogo"/>
+		</frame3d>
+		<frame3d posn="-160 22" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_ButtonBack"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="ButtonBack"/>
+		</frame3d>
+		<frame3d posn="-160 10" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_ButtonNav"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="ButtonNav"/>
+		</frame3d>
+		<frame3d posn="-160 -2" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_ButtonH"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="ButtonH"/>
+		</frame3d>
+		<frame3d posn="-160 -14" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_Station3x3"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="Station3x3"/>
+		</frame3d>
+		<frame3d posn="-160 -26" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_Title"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="Title"/>
+		</frame3d>
+		<frame3d posn="-160 -38" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_TitleEditor"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="TitleEditor"/>
+		</frame3d>
+		<frame3d posn="-160 -50" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_Window"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="Window"/>
+		</frame3d>
+		<frame3d posn="-160 -62" sizen="70 10" style3d="StyleButton">
+			<quad posn="0 0" sizen="70 10" scriptevents="1" id="Button_Stylesheet"/>
+			<label posn="5 -3" z-index="1" textsize="3" style="TextValueSmallSm" text="About <stylesheet>"/>
+		</frame3d>
+
+		<!-- The Frame3d Styles. Some are predefined via <stylesheet> tag. -->
+		
+		<!-- 
+			Home
+		-->
+		<frame posn="38 0 0" z-index="0" id="Frame_Home" scriptevents="1">
+			<frame3d posn="0 50" z-index="0" opacity="0.2" sizen="200 30" halign="center" valign="center" style3d="Title" scriptevents="1">
+				<label posn="0 0" z-index="1" halign="center" valign="center" textsize="8" textfont="BiryaniDemiBold" text="Styles 3D" scriptevents="1"/>
+			</frame3d>
+			<frame3d posn="0 -20" z-index="0" opacity="0.2" sizen="200 100" halign="center" valign="center" style3d="Frame_Window" scriptevents="1">
+				<quad posn="0 0" sizen="200 100"/>
+				<label posn="-95 45" sizen="190 60" z-index="2" textsize="2" autonewline="1" text="$s$f00It is required to visit this manialink on your maniaplanet home menu. Otherwise you won't see the 3D elements.
+
+$0af$iStyles 3D$i$g  is an extension to the existing $0af$hstyles$h$g manialink with the missing <frame3d> tags from the maniaplanet documentation ($ldoc.maniaplanet.com$l) and other elements such as the introduction to the <stylesheet> and <mood>.
+It Includes all the different <frame3d> tags, their manipulation to color, size etc. and how to enable and manipulate the menu clouds background with the <mood> tag.
+You can move this entire Manialink around like the stations from the maniaplanet main menu. Just hold the mouse button and move it around. This feature is also important for some special <frame3d> tags and some of their attributes to understand its concept.
+
+You can find more details in the ''About <stylesheet>'' section.
+
+$0afThis Manialink is still in development and misses alot of information at the moment as the maniaplanet forum is not reachable for now (2025-12-23)."/>
+				<label posn="96 -43" z-index="2" textsize="2" halign="right" textfont="BiryaniDemiBold" autonewline="1" manialink="njintm" focusareacolor1="00000000" focusareacolor2="00000000" text="powered by $fffN$000-$fffJin$g"/>
+			</frame3d>
+		</frame>
+
+		<!-- 
+			BaseStation
+		-->
+		<frame3d posn="55 0" sizen="240 120" opacity="1" halign="center" valign="center" style3d="Frame_BaseStation" id="Frame_BaseStation" scriptevents="1">
+			<label posn="-37 50" halign="right" textfont="BiryaniDemiBold" text="$sManialink tag:"/>
+			<entry posn="-35 50" sizen="85 5" z-index="1" textfont="BiryaniDemiBold" default='<frame3d style3d="BaseStation"></frame3d>'/>
+			<label posn="-150 40" textfont="BiryaniDemiBold" halign="left" valign="top" sizen="280 30" autonewline="1" text="$sDefault size of this element is 320x180 (whole manialink page) and is fixed. Meaning It's impossible to manipulate it through the ''sizen'' or ''scale'' attribute.
+You have to edit it through the ''zoffset'' attribute in a <style3d> inside a <frame3dstyles> tag where you set your style3d presets. It puts the station further away from you in a 3-dimensional space instead of shrinking it. A <stylesheet> preset is down below.
+
+Example:"/>
+			<textedit posn="-145 10" sizen="300 25" autonewline="1" textsize="2" z-index="1" style="StyleTextScriptEditor" showlinenumbers="1" default='<stylesheet>
+	<frame3dstyles>
+		<style3d model="Station3x3" thickness="1" zoffset="-1.0" fzoffset="-1.0" fyoffset="0.02" color="000" fcolor="FFF" lightcolor="0000FF" flightcolor="0000FF"/>
+	</frame3dstyles>
+</stylesheet>'/>
+		</frame3d>
+		
+		<!-- 
+			BaseBoxCase
+		-->
+		<frame posn="0 0" id="Frame_BaseBoxCase" scriptevents="1">
+			<frame3d posn="-30 0" sizen="80 110" halign="center" valign="center" style3d="BaseBoxCase">
+				<label posn="0 35" halign="center" valign="center" textfont="BiryaniDemiBold" text="$sManialink tag:"/>
+				<textedit posn="-35 30" sizen="70 10" textsize="3" textfont="BiryaniDemiBold" default='<frame3d style3d="BaseBoxCase">
+</frame3d>'/>
+			</frame3d>
+			<frame3d posn="30 0" z-index="0" opacity="0.2" sizen="100 110" halign="left" valign="center" style3d="Frame_Window" scriptevents="1">
+				<label posn="5 50" sizen="90 20" z-index="2" textsize="2" textfont="BiryaniDemiBold" autonewline="1" text="BaseBoxCase:
+You can create a Box Case with the predefined tag shown on the BoxCase or with the help of the <stylesheet> tag:"/>
+<textedit posn="15 35" sizen="80 20" autonewline="1" textsize="2" z-index="1" style="StyleTextScriptEditor" showlinenumbers="1" default='<stylesheet>
+	<frame3dstyles>
+		<style3d model="BoxCase" .../>
+	</frame3dstyles>
+</stylesheet>'/>
+			</frame3d>
+		</frame>
+		<frame3d posn="30 0" sizen="160 60" halign="center" valign="center" style3d="Titlelogo" id="Frame_Titlelogo" scriptevents="1">
+			<label posn="-45 0" sizen="90 100" valign="center" autonewline="1" textsize="2" text="Titlelogo is based on the ''Floating'' model which has no 3d model at all but it enables the tags inside like the other <frame3d> tags to be movable.
+
+Manialink tag:"/>
+		<textedit posn="-45 -10" sizen="70 5" textsize="2" textfont="BiryaniDemiBold" default='<frame3d style3d="Titlelogo"></frame3d>'/>
+		</frame3d>
+		<frame3d posn="30 0" sizen="70 13" halign="center" valign="center" style3d="ButtonBack" id="Frame_ButtonBack" scriptevents="1">
+		</frame3d>
+		<frame3d posn="30 0" sizen="70 13" halign="center" valign="center" style3d="ButtonNav" id="Frame_ButtonNav" scriptevents="1">
+		</frame3d>
+		<frame3d posn="30 0" sizen="70 13" halign="center" valign="center" style3d="ButtonH" id="Frame_ButtonH" scriptevents="1">
+		</frame3d>
+		
+		
+		<!-- 
+			Station1x1, Station2x2, Station3x3
+		-->
+		<frame posn="30 0" z-index="-3" halign="center" valign="center" id="Frame_Station3x3" scriptevents="1">
+			<frame3d posn="90 50" sizen="240 140" halign="center" valign="center" style3d="Frame3d_Station3x3" scriptevents="1">
+				<label posn="0 40" halign="center" textfont="BiryaniDemiBold" textsize="5" text="$sStation3x3 Manialink tag:"/>
+				<textedit posn="-140 30" sizen="290 30" autonewline="1" textsize="3" z-index="1" style="StyleTextScriptEditor" showlinenumbers="1" default='<stylesheet>
+	<frame3dstyles>
+		<style3d model="Station3x3" thickness="1" zoffset="-2.0" fzoffset="-2.0" fyoffset="0.02" color="000" fcolor="FFF" lightcolor="0000FF" flightcolor="0000FF"/>
+	</frame3dstyles>
+</stylesheet>'/>
+			</frame3d>
+			<frame3d posn="0 -30" z-index="-2" sizen="140 120" halign="center" valign="center" style3d="Frame3d_Station2x2" scriptevents="1">
+				<label posn="0 40" halign="center" textfont="BiryaniDemiBold" textsize="3" text="$sStation2x2 Manialink tag:"/>
+				<textedit posn="-70 30" sizen="160 20" autonewline="1" textsize="2" z-index="1" style="StyleTextScriptEditor" showlinenumbers="1" default='<stylesheet>
+	<frame3dstyles>
+		<style3d model="Station2x2" zoffset="-1" ... />
+	</frame3dstyles>
+</stylesheet>'/>
+			</frame3d>
+			<frame3d posn="-60 -55" z-index="-1" sizen="120 60" halign="center" valign="center" style3d="Frame3d_Station1x1" scriptevents="1">
+				<label posn="0 20" halign="center" textfont="BiryaniDemiBold" text="$sStation1x1 Manialink tag:"/>
+				<textedit posn="-37 10" sizen="82 15" autonewline="1" textsize="1" z-index="1" style="StyleTextScriptEditor" showlinenumbers="1" default='<stylesheet>
+	<frame3dstyles>
+		<style3d model="Station1x1" zoffset="0" ... />
+	</frame3dstyles>
+</stylesheet>'/>
+			</frame3d>
+		</frame>
+
+		<frame3d posn="30 0" sizen="70 13" halign="center" valign="center" style3d="Title" id="Frame_Title" scriptevents="1">
+		</frame3d>
+		<frame3d posn="30 0" sizen="70 13" halign="center" valign="center" style3d="TitleEditor" id="Frame_TitleEditor" scriptevents="1">
+		</frame3d>
+		<frame3d posn="30 0" sizen="70 13" halign="center" valign="center" style3d="Window" id="Frame_Window" scriptevents="1">
+		</frame3d>
+		<frame posn="38 -88 0" id="Frame_Stylesheet" scriptevents="1">
+			<frame3d posn="-1 160.5" z-index="0" sizen="247 25" halign="center" valign="center" style3d="TitleMenuBg">
+				<label posn="0 5" z-index="1" halign="center" valign="center" textsize="8" textfont="BiryaniDemiBold" style="" text="About <stylesheet>"/>
+				<label posn="0 -5" z-index="1" halign="center" valign="center" textsize="3" textfont="BiryaniDemiBold" text="More information on how the <stylesheet> tag works and which other tags you can include in."/>
+			</frame3d>
+			<frame3d posn="-124.5 146 0" sizen="247 146" color="000" opacity="0.5" lightcolor="000" style3d="Frame_Window">
+				<!--
+					Stylesheet Page 1
+				-->
+				<frame posn="3 -3" id="StylesheetPage_0" scriptevents="1">
+					<label sizen="240 50" textsize="1.5" style="Manialink_Body" autonewline="true" text="$s$08fThe <stylesheet> tag is a special manialink tag in which you can create and edit presets of your <frame3d> tags as well as manipulating the <mood> background.$z$s
+$0afThis section contains the usage of the <frame3dstyles> tag.	$g	
+
+A <frame3dstyles> tag is a section in <stylesheet> where you create your <style3d> tags inside it to define your presets for your <frame3d> tags. In the <style3d> tag you can create your <frame3d> preset style by defining attributes of your 3d model type, thickness of that model, the offset, color, lighting color and when It gets focused by your mouse when you hover on it. You define your ''id'' in the <style3d> tag which you'll later use it for your <frame3d> element.
+
+An example of a <stylesheet> preset like the buttons on the left side of this manialink is shown below:"/>
+					<textedit posn="10 -30" sizen="230 36" textsize="1" style="StyleTextScriptEditor" autonewline="true" showlinenumbers="1" default='<manialink version="3" background="stars" navigable3d="no"> <!-- background: stars, stations, title; navigable3d: no, yes -->
+	<stylesheet>
+		<frame3dstyles>
+			<style3d id="StyleButtonExample" model="Button" thickness="0.05" color="008" zoffset="0.2" fzoffset="0.21" fcolor="00F" lightcolor="000088" flightcolor="0000FF"/>
+		</frame3dstyles>
+	</stylesheet>
+	<frame3d posn="-110 70" z-index="1" sizen="70 10" style3d="StyleButtonExample">
+		<quad posn="0 0" z-index="2" sizen="70 10"/>
+		<label posn="5 -3" z-index="3" textsize="3" style="TextValueSmallSm" text="Example Button"/>
+	</frame3d>
+</manialink>' />
+				<label posn="0 -70" textsize="1.5" style="Manialink_Body" autonewline="true" text="$sThe result shown below (and on the left side): You can interact with the mouse to see the effect of the fzoffset attribute."/>
+				<label posn="0 -90" textsize="1.5" style="Manialink_Body" autonewline="true" text="$sFollowing attributes can be used for the"/>
+				<label posn="60 -90" textsize="1.5" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="<style3d>" textcolor="0AF"/>
+				<label posn="79 -90" textsize="1.5" style="Manialink_Body" autonewline="true" text="$stag:"/>
+				<label posn="0 -94" textsize="1.3" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="model, thickness, color, fcolor, lightcolor, flightcolor, yoffset, zoffset, fyoffset, fzoffset."/>
+				<label posn="0 -100" textsize="1.5" style="Manialink_Body" autonewline="true" text="$sFor the"/>
+				<label posn="12 -100" textsize="1.5" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="model" textcolor="0AF"/>
+				<label posn="23 -100" textsize="1.5" style="Manialink_Body" autonewline="true" text="$sattribute the following options are available:"/>
+				<label posn="0 -104" textsize="1.3" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="Station3x3, Station2x2, Station1x1, Box, BoxCase, Button, Window, WindowH, Title, Floating."/>
+				<label posn="0 -110" textsize="1.5" style="Manialink_Body" autonewline="true" text="$sThe following style3d's for the "/>
+				<label posn="45 -110" textsize="1.5" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="<frame3d>" textcolor="0AF"/>
+				<label posn="63 -110" textsize="1.5" style="Manialink_Body" autonewline="true" text="$stag are predefined and available without using the "/>
+				<label posn="138 -110" textsize="1.5" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="<stylesheet>" textcolor="0AF"/>
+				<label posn="162 -110" textsize="1.5" style="Manialink_Body" autonewline="true" text="$stag:"/>
+				<label posn="0 -114" sizen="240 0" textsize="1.3" style="StyleTextScriptEditor" scriptevents="0" autonewline="true" text="Title, BaseStation, BaseBoxCase, Titlelogo, ButtonBack, ButtonNav, ButtonH, Window, TitleEditor, Back, NavButton, Generic, Window2, Window3, TitlePage, Title2, Title3, Title3_1, Title3_2, Title3_3, Title3_4, Title3_5."/>
+				<label posn="0 -122" textsize="1.5" style="Manialink_Body" autonewline="true" text="$s$f00To Do: <mood> (explanation of LDir0, LDir1, ...), <skygradient>"/>
+				</frame>
+				<frame posn="3 -3" id="StylesheetPage_1" scriptevents="1" hidden="1">
+					<label sizen="240 50" textsize="1.5" style="Manialink_Body" autonewline="true" text="$s$08fThe <stylesheet> tag is a special manialink tag in which you can create and edit presets of your <frame3d> tags as well as manipulating the <mood> background.$z$s
+$0afThis section contains the usage of the <mood> tag.	$g
+
+The <mood> tag has the feature to manipulate the background of the maniaplanet main menu. It can manipulate the color, the light colors and intensity and also the gradient with the <skygradient> tag inside of the <mood> tag.
+
+An example manialink with the <mood> tag with colors from the maniaplanet main menu and an example <skygradient> tag is shown below:"/>
+				<textedit posn="10 -25" sizen="102 99" textsize="1" style="StyleTextScriptEditor" autonewline="true" showlinenumbers="1" default='<manialink version="3" background="stations" navigable3d="no">
+	<stylesheet>
+		<mood 
+			LAmbient_LinearRgb="0.004 0.012 0.03" 
+			LDir0_LinearRgb="1 1 1" 
+			LDir0_Intens="2" 
+			LDir0_DirTheta="52.2" 
+			LDir0_DirPhi="180" 
+			LDir1_LinearRgb="1 1 1" 
+			LDir1_Intens="1.75" 
+			LDir1_DirTheta="92.88" 
+			LDir1_DirPhi="87.12" 
+			LBall_LinearRgb="0.004 0.004 0.004" 
+			LBall_Intens="1" 
+			LBall_Radius="20000" 
+			CloudsRgbMinLinear="0.462077 0.462077 0.462077" 
+			CloudsRgbMaxLinear="1 1 1" 
+			CloudsRgbMinScale="1" 
+			CloudsRgbMaxScale="1.8" 
+			FogColorSrgb="0 0 0" 
+			SkyGradientV_Scale="1" 
+			SelfIllumColor="1 1 1" 
+			SkyGradientXAsTimeOfDay="1"
+			>
+			<skygradient>
+				<key color="b2ffd1" x="0.21" scale="1.9645" />
+				<key color="a9f2c6" x="0.25" />
+				<key color="9ddcfd" x="0.3" />
+				<key color="8080a0" x="0.45" />
+			</skygradient>
+		</mood>
+	</stylesheet>
+</manialink>' />
+				</frame>
+				<!-- Stylesheet Navigation -->
+				<frame posn="120 -138">
+					<quad posn="-3 0" sizen="6 6" style="Icons64x64_1" substyle="ClipPause" id="StylesheetNavFirst"/>
+					<quad posn="-3 0" sizen="6 6" style="Icons64x64_1" substyle="ArrowPrev" id="StylesheetNavPrev" scriptevents="1" hidden="1"/>
+					<quad posn="3 0" sizen="6 6" style="Icons64x64_1" substyle="ArrowNext" id="StylesheetNavNext" scriptevents="1"/>
+					<quad posn="3 0" sizen="6 6" style="Icons64x64_1" substyle="ClipPause" id="StylesheetNavLast" hidden="1"/>
+				</frame>
+			</frame3d>
+			<frame3d posn="-110 67" z-index="1" sizen="70 10" style3d="StyleButtonExample" id="StyleButtonExample">
+				<quad posn="0 0" z-index="2" sizen="70 10"/>
+				<label posn="5 -3" z-index="3" textsize="3" style="TextValueSmallSm" text="Example Button"/>
+			</frame3d>
+		</frame>
+
+		<!--<frame3d posn="240 0 0" sizen="160 80" halign="center" valign="center" style3d="Titlelogo">
+		</frame3d>-->
+
+<script>
+<![CDATA[#Include "TextLib" as TL
+#Include "MathLib" as ML		
+
+main () {
+	declare CMlFrame[Text] Navigation = [
+		"Button_Home"				=> (Page.GetFirstChild("Frame_Home")		as CMlFrame),
+		"Button_BaseStation"		=> (Page.GetFirstChild("Frame_BaseStation")	as CMlFrame),
+		"Button_BaseBoxCase"		=> (Page.GetFirstChild("Frame_BaseBoxCase")	as CMlFrame),
+		"Button_Titlelogo"			=> (Page.GetFirstChild("Frame_Titlelogo")	as CMlFrame),
+		"Button_ButtonBack"			=> (Page.GetFirstChild("Frame_ButtonBack")	as CMlFrame),
+		"Button_ButtonNav"			=> (Page.GetFirstChild("Frame_ButtonNav")	as CMlFrame),
+		"Button_ButtonH"			=> (Page.GetFirstChild("Frame_ButtonH")		as CMlFrame),
+		"Button_Station3x3"			=> (Page.GetFirstChild("Frame_Station3x3")	as CMlFrame),
+		"Button_Title"				=> (Page.GetFirstChild("Frame_Title")		as CMlFrame),
+		"Button_TitleEditor"		=> (Page.GetFirstChild("Frame_TitleEditor")	as CMlFrame),
+		"Button_Window"				=> (Page.GetFirstChild("Frame_Window")		as CMlFrame),
+		"Button_Stylesheet"			=> (Page.GetFirstChild("Frame_Stylesheet")	as CMlFrame)
+	];
+
+	declare CMlFrame[] StylesheetPages = [
+		(Page.GetFirstChild("StylesheetPage_0") as CMlFrame),
+		(Page.GetFirstChild("StylesheetPage_1") as CMlFrame)
+	];
+
+	declare StylesheetNavFirst  <=> (Page.GetFirstChild("StylesheetNavFirst")  as CMlQuad);
+	declare StylesheetNavNext   <=> (Page.GetFirstChild("StylesheetNavNext")   as CMlQuad);
+	declare StylesheetNavPrev   <=> (Page.GetFirstChild("StylesheetNavPrev")   as CMlQuad);
+	declare StylesheetNavLast   <=> (Page.GetFirstChild("StylesheetNavLast")   as CMlQuad);
+
+	declare StyleButtonExample <=> (Page.GetFirstChild("StyleButtonExample") as CMlFrame);
+
+	foreach (NavPage in Navigation) {
+		NavPage.Hide();
+	}
+	foreach (StylesheetPage in StylesheetPages) {
+		StylesheetPage.Hide();
+	}
+	declare Integer CurrentStylesheetPage = 0;
+	Navigation["Button_Home"].Show();
+	StylesheetPages[CurrentStylesheetPage].Show();
+
+	while(True) {
+		yield;
+		foreach(Event in PendingEvents) {
+			switch (Event.Type) {
+				case CMlScriptEvent::Type::MouseClick: {
+					foreach(Button => Frame in Navigation) {
+						switch (Event.ControlId) {
+							case Button: {
+								foreach (Element in Navigation) {
+									Element.Hide();
+								}
+								Frame.Show();
+							}
+						}
+					}
+					switch (Event.ControlId) {
+						case "StylesheetNavNext": {
+							CurrentStylesheetPage += 1;
+							if (CurrentStylesheetPage == 0) {
+								StylesheetNavPrev.Hide();
+								StylesheetNavLast.Hide();
+								StylesheetNavNext.Show();
+								StylesheetNavFirst.Show();
+								StyleButtonExample.Show();
+							}
+							else if (CurrentStylesheetPage == StylesheetPages.count - 1) {
+								StylesheetNavPrev.Show();
+								StylesheetNavLast.Show();
+								StylesheetNavNext.Hide();
+								StylesheetNavFirst.Hide();
+								StyleButtonExample.Hide();
+							}
+							else {
+								StylesheetNavPrev.Show();
+								StylesheetNavLast.Hide();
+								StylesheetNavNext.Show();
+								StylesheetNavFirst.Hide();
+								StyleButtonExample.Hide();
+							}
+							StylesheetPages[CurrentStylesheetPage - 1].Hide();
+							StylesheetPages[CurrentStylesheetPage].Show();
+							log(CurrentStylesheetPage);
+							break;
+						}
+						case "StylesheetNavPrev": {
+							CurrentStylesheetPage -= 1;
+							if (CurrentStylesheetPage == 0) {
+								StylesheetNavPrev.Hide();
+								StylesheetNavLast.Hide();
+								StylesheetNavNext.Show();
+								StylesheetNavFirst.Show();
+								StyleButtonExample.Show();
+							}
+							else if (CurrentStylesheetPage == StylesheetPages.count - 1) {
+								StylesheetNavPrev.Show();
+								StylesheetNavLast.Show();
+								StylesheetNavNext.Hide();
+								StylesheetNavFirst.Hide();
+								StyleButtonExample.Hide();
+							}
+							else {
+								StylesheetNavPrev.Show();
+								StylesheetNavLast.Hide();
+								StylesheetNavNext.Show();
+								StylesheetNavFirst.Hide();
+								StyleButtonExample.Hide();
+							}
+							StylesheetPages[CurrentStylesheetPage + 1].Hide();
+							StylesheetPages[CurrentStylesheetPage].Show();
+							log(CurrentStylesheetPage);
+							break;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}
+]]></script>
+</manialink>
